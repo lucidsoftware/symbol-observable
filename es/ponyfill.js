@@ -1,4 +1,6 @@
-export default function symbolObservablePonyfill(root) {
+goog.module('symbol_observable.ponyfill');
+
+exports.default = function symbolObservablePonyfill(root) {
 	var result;
 	var Symbol = root.Symbol;
 

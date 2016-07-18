@@ -1,12 +1,14 @@
-/* global window */
-import ponyfill from './ponyfill';
+goog.module('symbol_observable');
 
-var root = this;
+/* global window */
+var ponyfill = goog.require('symbol_observable.ponyfill');
+
+var root;
 if (typeof global !== 'undefined') {
 	root = global;
-} else if (typeof window !== 'undefined') {
+} else {
 	root = window;
 }
 
-var result = ponyfill(root);
-export default result;
+var result = ponyfill.default(root);
+exports.default = result;
